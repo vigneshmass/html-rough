@@ -1,0 +1,47 @@
+.button
+{
+  display: grid;
+  grid-template-columns: 50%;
+  
+  border:60px;
+  padding:80px 70px;
+  background-image:url(csm_TI_RESTAURANT_PALMBEACH4_RGB_2000x860_add5f54263.jpg);
+  background-size:cover;
+  color:black;
+  width:20%;
+  top:-5.5%;
+  text-align: top;
+  font-size: 180%;
+  font-family: regular;
+  margin-top:50px;
+  border:none;
+  outline:none;
+  margin-left:40px;
+  color:black;
+  transition:3s;
+  border-radius:px;
+}
+.button:hover{
+    background-image:url();
+    transition: 2s;
+}
+.table{
+
+    font-family:;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    color: rgb(30, 90, 90);
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #afb1af;
+  }
+  
+  
+  

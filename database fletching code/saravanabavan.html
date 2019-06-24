@@ -1,0 +1,64 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="saravanabavan.css">
+    </head>
+    <body>
+            <div class="container">
+                    <input type="button"   class="button" onclick="loadPosts()" value="Peshawri" id="button" />
+        </div>
+        <div id="hotels"></div>
+<script type = "text/javascript">
+        function loadPosts() {
+            console.log("hi");
+      fetch('http://localhost:8080/api/rest')
+      .then((res) => res.json()).then(rest => {
+          let output = '';
+          rest.map(h => {
+              //console.log(h);
+              output += `
+                  <h1>${h. restName}</h1>
+                  <p>${h.restAddress}</p>
+                  <p>${h.restType}</p>
+  
+  
+  
+                  <table class="table">
+                    <tr>
+                      <th>country</th>
+                      <th>city</th>
+                      <th>managerName</th>
+                      <th>phoneno</th>
+                      <th>email</th>
+                      <th>website</th>
+                      <th>facility</th>
+                      <th>zipcode</th>
+                        </tr>
+                     <tr>
+                      <td>${h.country}</td>
+                      <td>${h.city}</td>
+                      <td>${h.managerName}</td>
+                      <td>${h.phoneno}</td>
+                      <td>${h.email}</td>
+                      <td>${h.website}</td>
+                      <td>${h.facility}</td>
+                      <td>${h.zipcode}</td>
+                        </tr>
+                      </table>
+  
+  
+                 
+              `;
+              console.log(h.restName);
+          });
+          document.getElementById('hotels').innerHTML = output;
+          // window.location.href = "http://www.w3schools.com";
+      })
+      .catch((err) => {
+          console.log(err);
+      });
+  }
+  </script>
+
+
+    </body>
+</html>
